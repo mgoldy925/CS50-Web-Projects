@@ -1,0 +1,23 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Edit Page
+{% endblock %}
+
+{% block body %}
+    <h1>Page Editor</h1>
+    <div class="qqq"></div>
+
+    {% if error %}
+        <div class="alert alert-dark" role="alert">{{ error_message }}</div>
+    {% endif %}
+
+    <div class="edit-form">
+        <form action="{% url 'edit' %}" method="post">
+            {% csrf_token %}
+            {{ edit_form }}
+            <button type="submit" class="btn btn-secondary edit-btn" name="next" value="{{ request.path }}">Submit</button>
+        </form>
+    </div>
+
+{% endblock %}
