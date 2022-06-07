@@ -1,0 +1,32 @@
+textarea {
+    min-height: 400px;
+}
+
+.email-div {
+    border: 1px solid #5a5c6e;
+    cursor: pointer;
+}
+
+.email-div p {
+    display: inline;
+    margin: auto 10px;
+}
+
+.email-div-1 {
+    font-weight: bold;
+}
+.email-div-2 {
+    padding-left: 10px;
+}
+
+.email-div-3 {
+    float: right;
+}
+
+#sender, #timestamp, #archive, #reply {
+    display: inline;
+}
+
+.email-buttons, #timestamp {
+    float: right;
+}
