@@ -1,0 +1,15 @@
+{% extends "network/paginator.html" %}
+{% load static %}
+
+{% block scripts %}<script src="{% static 'network/profile.js' %}"></script>{% endblock %}
+
+{% block top_info %}
+
+    <h1 id="profile-name">{{ profile.username }}</h1>
+    <p><b>Followers:</b> <span id="follower-count">{{ profile.followers|length }}</span></p>
+    {% if request.user.is_authenticated and not_profile %}
+        <button class="btn btn-primary" id="follow">{% if request.user in profile.followers %}{{ 'Unf' }}{% else %}{{ 'F' }}{% endif %}ollow</button>
+    {% endif %}
+
+    <h1>{{ profile.username }}'s Posts</h1>
+{% endblock %}

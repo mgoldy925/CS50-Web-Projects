@@ -1,0 +1,38 @@
+.new-post {
+    margin-bottom: 3vh;
+}
+
+.post {
+    border: 1px solid #DCDCDC;
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin-bottom: 10px;
+}
+
+.post > h5 {
+    display: inline-block;
+}
+
+#content {
+    padding: 1vh 0;
+}
+
+.post > textarea {
+    display: block;
+}
+
+#page-numbers {
+    display: inherit;
+}
+
+.pagination li {
+    cursor: pointer;
+}
+
+textarea {
+    width: max-content;
+}
+
+button {
+    margin: 0px 5px;
+}

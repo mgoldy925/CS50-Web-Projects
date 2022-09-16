@@ -1,0 +1,20 @@
+{% extends "network/paginator.html" %}
+{% load static %}
+
+{% block scripts %}<script src="{% static 'network/all.js' %}"></script>{% endblock %}
+
+{% block top_info %}
+    {% if user.is_authenticated %}
+        <div class="new-post">
+            <h3>Post Something New</h3>
+            <form id="create">
+                <div class="form-group">
+                    <textarea autofocus class="form-control" id="content" placeholder="Type your post here..."></textarea>
+                </div>
+                <input class="btn btn-primary" type="submit">
+            </form>
+        </div>
+    {% endif %}
+
+    <h1>All Posts</h1>
+{% endblock %}
